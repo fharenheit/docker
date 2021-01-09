@@ -1,0 +1,13 @@
+[Unit]
+Description=Demo Java Service
+
+[Service]
+WorkingDirectory=/opt/prod
+ExecStart=java -jar /opt/app/demo-0.0.1-SNAPSHOT.jar
+User=root
+Type=simple
+Restart=on-failure
+RestartSec=10
+
+[Install]
+WantedBy=multi-user.target
